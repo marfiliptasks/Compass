@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="setup_coords">Click to setup coordinates!</string>
+    <string name="Latitude">Latitude</string>
+    <string name="Longitude">Longitude</string>
+    <string name="enter_cords">Enter the coordinates in decimal degrees, please</string>
+    <string name="confirm">Confirm</string>
+    <string name="accept">Accept</string>
+    <string name="listeners_registering_fail">Failed to register listeners! Please check if location services are turned on, then retry!</string>
+    <string name="warning">Warning</string>
+    <string name="location_services_disabled">Location services are disabled! Please turn it on.</string>
+    <string name="ok">OK</string>
+    <string name="compass">Compass</string>
+    <string name="target">Target</string>
+</resources>

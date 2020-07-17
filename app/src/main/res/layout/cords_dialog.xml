@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    style="@style/Theme.MaterialComponents.Dialog"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cords_dialog_text"
+        android:layout_width="0dp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_cords"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:textSize="@dimen/text_mid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cords_dialog_latitude"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cords_dialog_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cords_dialog_latitude_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Latitude"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/text_mid"
+            android:padding="@dimen/dialog_padding_normal"
+            android:textColorHint="?attr/colorAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cords_dialog_longitude"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cords_dialog_latitude">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cords_dialog_longitude_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Longitude"
+            android:textSize="@dimen/text_mid"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/dialog_padding_normal"
+            android:textColorHint="?attr/colorAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cords_dialog_apply"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/confirm"
+        android:enabled="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cords_dialog_longitude" />
+</androidx.constraintlayout.widget.ConstraintLayout>

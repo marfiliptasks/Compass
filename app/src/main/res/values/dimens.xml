@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dialog_padding_normal">10dp</dimen>
+    <dimen name="margin_normal">10dp</dimen>
+    <dimen name="text_dialog_normal">20sp</dimen>
+    <dimen name="text_main">20sp</dimen>
+    <dimen name="text_mid">15sp</dimen>
+</resources>
