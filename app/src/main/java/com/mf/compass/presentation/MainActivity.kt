@@ -12,6 +12,7 @@ import com.mf.domain.model.eventModels.ProvidersChangedEvent
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.jakewharton.rxbinding4.view.clicks
 import dagger.android.support.DaggerAppCompatActivity
+import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -34,7 +35,7 @@ class MainActivity : DaggerAppCompatActivity() {
             ProvidersChangedReceiver(),
             IntentFilter(LocationManager.PROVIDERS_CHANGED_ACTION)
         )
-        fab.clicks().throttleFirst(500, TimeUnit.MILLISECONDS).subscribe {
+        fab.setOnClickListener {
             CordsDialogFragment().show(supportFragmentManager, null)
         }
     }

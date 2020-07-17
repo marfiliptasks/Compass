@@ -1,9 +1,11 @@
 package com.mf.compass.presentation.coordsDialog
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.mf.compass.R
@@ -20,10 +22,14 @@ class CordsDialogFragment : DaggerDialogFragment() {
         savedInstanceState: Bundle?
     ): View? = inflater.inflate(R.layout.cords_dialog, container, true)
 
+    companion object{
+        private var isShowing = false
+    }
+
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    private val viewModel: CompassViewModel by activityViewModels{
+    private val viewModel: CompassViewModel by activityViewModels {
         viewModelFactory
     }
 
@@ -52,5 +58,18 @@ class CordsDialogFragment : DaggerDialogFragment() {
             )
             dismiss()
         }
+        cords_dialog_cancel.setOnClickListener {
+            dismiss()
+        }
+    }
+
+    override fun show(manager: FragmentManager, tag: String?) {
+        if (isShowing) return
+        isShowing = true
+        super.show(manager, tag)
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        isShowing = false
     }
 }

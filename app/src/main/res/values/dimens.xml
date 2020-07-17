@@ -5,4 +5,5 @@
     <dimen name="text_dialog_normal">20sp</dimen>
     <dimen name="text_main">20sp</dimen>
     <dimen name="text_mid">15sp</dimen>
+    <dimen name="text_normal">12sp</dimen>
 </resources>
