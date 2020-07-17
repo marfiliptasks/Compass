@@ -10,13 +10,10 @@ import com.mf.compass.presentation.coordsDialog.CordsDialogFragment
 import com.mf.data.dataSources.ProvidersChangedReceiver
 import com.mf.domain.model.eventModels.ProvidersChangedEvent
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.jakewharton.rxbinding4.view.clicks
 import dagger.android.support.DaggerAppCompatActivity
-import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
-import java.util.concurrent.TimeUnit
 
 
 class MainActivity : DaggerAppCompatActivity() {
