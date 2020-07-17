@@ -55,5 +55,5 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.2.0'
     implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
     implementation project(":domain")
-    implementation project(":androidDataModule")
+    implementation project(":data")
 }

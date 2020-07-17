@@ -6,7 +6,7 @@
     app:startDestination="@id/compassFragment">
     <fragment
         android:id="@+id/compassFragment"
-        android:name="com.example.compass.presentation.compass.CompassFragment"
+        android:name="com.mf.compass.presentation.compass.CompassFragment"
         android:label="compass_fragment"
         tools:layout="@layout/compass_fragment" />
 </navigation>

@@ -1,4 +1,4 @@
-include ':androidDataModule'
+include ':data'
 include ':domain'
 include ':app'
 rootProject.name = "Compass"
